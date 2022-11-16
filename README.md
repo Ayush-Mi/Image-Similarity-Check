@@ -22,7 +22,24 @@ All the required dependencies can be installed using requirement.txt
 
 #### Siamese Network
 
+Model Architecture
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/outer-model.png)
+
+Model was trained for ten epochs with contrastive loss function and Adam optimizer
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/model_performance.png)
+
 #### VGG16 Network
+
+After passing the image through pretrained VGG16 network the feature vector of dimension (4096,) was taken from 'fc2' layers. The PCA analysis with 100 components was done on the generated featuresand later 2D T-SNE plot was used to see the distribution of images in dataset.
+
+2D TSNE plot of 100 samples taken randomly from dataset
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/Feature_Map.png)
+
+Test Image | Pred 1 (0.693) | Pred 2 (0.656) | Pred 3 (0.652) | Pred 4 (0.649)
+:---: | :---: | :---: | :---: | :---:
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/test_image.png) | ![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/pred_1.png) | ![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/pred_2.png) | ![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/pred_3.png) | ![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/pred_4.png) 
+
+As observed in the above results, the model is seems to be looking at the colour and shapes of objects in given image as feature, hence some fintuning on the data is required to generate better scores.
 
 ## Conclusion
 For big data the solution can be implemented using PySpark which reduce the amount of time required to compare the fearure vector of given image.
