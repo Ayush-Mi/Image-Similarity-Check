@@ -8,6 +8,8 @@ Here the similarity scoring method has been divided into two different approches
 
 The first approach is ideal if we are working on small set of data but it will take a lot of time to compare with each image if number of images are large. This problem is solved by using the second approach where the feature vector of known images are already extracted and stored as pickle file. The new image only has perform the distance calculation between the stored features and the test image feature.
 
+The inference time for second method can be further reduced by performing PCA in the generated feature and using that for distance calculation. The backend NN model can also be finetuned/retrained to increase the accuracy.
+
 ## Dataset
 A subset from the [CVPR Indoor Scene Classification](https://web.mit.edu/torralba/www/indoor.html) was used which had images only from Grocery, Gym, Bookstore and Kitchen classes. 
 
