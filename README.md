@@ -26,7 +26,7 @@ Model Architecture
 ![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/outer-model.png)
 
 Model was trained for ten epochs with contrastive loss function and Adam optimizer
-![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/model_performance.png)
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/Model_performance.png)
 
 #### VGG16 Network
 
