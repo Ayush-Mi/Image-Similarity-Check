@@ -33,7 +33,7 @@ Model was trained for ten epochs with contrastive loss function and Adam optimiz
 After passing the image through pretrained VGG16 network the feature vector of dimension (4096,) was taken from 'fc2' layers. The PCA analysis with 100 components was done on the generated featuresand later 2D T-SNE plot was used to see the distribution of images in dataset.
 
 2D TSNE plot of 100 samples taken randomly from dataset
-![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/Feature_Map.png)
+![](https://github.com/Ayush-Mi/Image_Similarity_Scoring/blob/main/image/Feature_Map.jpg)
 
 Test Image | Pred 1 (0.693) | Pred 2 (0.656) | Pred 3 (0.652) | Pred 4 (0.649)
 :---: | :---: | :---: | :---: | :---:
